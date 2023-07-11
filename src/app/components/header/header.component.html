@@ -1,0 +1,40 @@
+<nav>  
+  <a class="brand" routerLink="/">
+    <img src="/assets/myposts.png" alt="My Posts" />
+    <h2>My Posts</h2>
+  </a>
+
+  <ul id="my-navbar" class="links">
+    <li>
+      <a routerLink="/">My Posts</a>
+    </li>
+    <li id="add">
+      <a routerLink="/myposts/new">Adicionar</a>
+    </li>
+    <li>
+      <a routerLink="/about">Sobre</a>
+    </li>
+  </ul>
+
+  <div id="btn-hamburguer" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</nav>
+
+<div id="navbar-collapse" class="collapse links-collapse">
+  <ul>
+    <li>
+      <a routerLink="/">My Posts</a>
+    </li>
+    <li id="add">
+      <a routerLink="/myposts/new">Adicionar</a>
+    </li>
+    <li>
+      <a routerLink="/about">Sobre</a>
+    </li>
+  </ul>
+</div>
+
+

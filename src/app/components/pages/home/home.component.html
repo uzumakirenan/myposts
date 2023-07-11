@@ -1,0 +1,30 @@
+<div class="home-container">
+  <h1>Postagens mais recentes:</h1>
+  <div class="search-container">
+    <form>
+      <fa-icon [icon]="faSearch"></fa-icon>
+      <input type="text" class="form-control" placeholder="Buscar postagem..."
+        (input)="search($event)"
+      />
+    </form>
+  </div>
+  <div *ngIf="myposts.length > 0; else noMyPosts">
+    <div class="myposts-container">
+      <div class="moment" *ngFor="let moment of myposts">
+        <div class="img-container">
+          <img
+            src="{{ baseApiUrl }}uploads/{{ moment.image }}"
+            alt="{{ moment.title }}"
+          />
+        </div>        
+        <h3>{{ moment.title }}</h3>
+        <p class="date">Em: {{ moment.created_at }}</p>
+        <p>Comentários: {{ moment.comments!.length }}</p>
+        <p><a routerLink="myposts/{{ moment.id }}">Detalhes</a></p>
+      </div>
+    </div>
+  </div>
+  <ng-template #noMyPosts>
+    <h1>Não existe postagens!</h1>
+  </ng-template>
+</div>

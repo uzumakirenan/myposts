@@ -1,0 +1,87 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  border-bottom: 1px solid #777;
+}
+
+.brand,
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand img {
+  width: 40px;
+  margin-right: 0.6em;
+}
+
+.brand h2 {
+  transition: 0.4s;
+}
+
+.brand:hover > h2 {
+  color: #dec129;
+}
+
+.links li {
+  margin-right: 1em;
+  list-style: none;
+}
+
+.links a {
+  padding: 0.1em 0.3em;
+}
+
+#add a {
+  color: #dec129;
+}
+
+#add a:hover {
+  background-color: #efefef;
+}
+
+#btn-hamburguer{
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 50px;
+  padding: 10px;  
+  cursor: pointer;
+}
+
+#btn-hamburguer div{
+  width: 100%;
+  height: 3px;
+  background: #444;
+}
+
+.links-collapse li{
+  list-style: none;
+  text-align: right;
+  padding: 5px;
+  padding-right: 25px;
+}
+
+.links-collapse a{
+  color: white;
+}
+
+.links-collapse a:hover {
+  color: #dec129;
+}
+
+#navbar-collapse{
+  background: #444;
+}
+
+@media(max-width: 768px){
+  #my-navbar{
+    display: none;
+  }
+
+  #btn-hamburguer{
+    display: flex;
+  }
+}
